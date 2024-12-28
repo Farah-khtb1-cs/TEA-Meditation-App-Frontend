@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F1F5D8"
+    android:padding="3dp"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/profilebutton"
+        android:layout_width="30dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rounded_button_background"
+        android:clipToOutline="true"
+        android:contentDescription="User profile picture"
+        android:clickable="true"
+        android:focusable="true"
+        android:scaleType="centerInside"
+        android:src="@drawable/defaultpp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="TEA MEDITATION"
+        android:textColor="#9E705F"
+        android:textSize="24sp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="55dp"
+        android:backgroundTint="@color/beige"
+        android:gravity="center"
+        android:text="@string/button1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:clickable="true"
+        />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/beige"
+        android:gravity="center"
+        android:layout_margin="10dp"
+        android:text="MEDI GUIDELINES"
+        app:layout_constraintBaseline_toBaselineOf="@+id/button1"
+        app:layout_constraintStart_toEndOf="@+id/button1"
+        android:clickable="true"/>
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/beige"
+        android:gravity="center"
+        android:layout_margin="10dp"
+        android:text="FAVORITE"
+        app:layout_constraintBaseline_toBaselineOf="@+id/button2"
+        app:layout_constraintStart_toEndOf="@+id/button2"
+        android:clickable="true"/>
+
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button3">
+
+        <TableLayout
+            android:id="@+id/main.2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button4"
+            tools:context=".Main.2Activity">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/anxiety"
+                    android:layout_width="130dp"
+                    android:layout_height="160dp"
+                    android:layout_margin="10dp"
+                    android:clickable="true"
+                    android:contentDescription="@string/text1"
+                    android:focusable="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/anexiety"
+                    android:background="@drawable/image_background"
+                    android:elevation="40sp"
+                    android:outlineProvider="background"
+                    android:clipToOutline="true"
+                    android:translationZ="40sp"
+                    android:paddingBottom="2dp"
+
+                    />
+
+                <ImageView
+                    android:id="@+id/depression"
+                    android:layout_width="130dp"
+                    android:layout_height="160dp"
+                    android:layout_margin="10dp"
+                    android:clickable="true"
+                    android:contentDescription="@string/text2"
+                    android:focusable="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/depression"
+                    android:background="@drawable/image_background"
+                    android:elevation="40sp"
+                    android:outlineProvider="background"
+                    android:clipToOutline="true"
+                    android:translationZ="40sp"
+                    android:paddingBottom="2dp"
+                    />
+
+                <ImageView
+                    android:id="@+id/sensers"
+                    android:layout_width="130dp"
+                    android:layout_height="160dp"
+                    android:layout_margin="10dp"
+                    android:clickable="true"
+                    android:contentDescription="supersensers heal"
+                    android:focusable="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/supersenser"
+                    android:background="@drawable/image_background"
+                    android:elevation="40sp"
+                    android:outlineProvider="background"
+                    android:clipToOutline="true"
+                    android:translationZ="40sp"
+                    android:paddingBottom="2dp"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="serif"
+                    android:gravity="center"
+                    android:text="Anxiety"
+                    android:textColor="@color/beige" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="serif"
+                    android:gravity="center"
+                    android:text="Ereasing Deprresion"
+                    android:textColor="@color/beige" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="serif"
+                    android:gravity="center"
+                    android:text="SuperSensers heal"
+                    android:textColor="@color/beige" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/sleep"
+                    android:layout_width="130dp"
+                    android:layout_height="160dp"
+                    android:layout_margin="10dp"
+                    android:clickable="true"
+                    android:contentDescription="@string/text4"
+                    android:focusable="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/sleep"
+                    android:background="@drawable/image_background"
+                    android:elevation="40sp"
+                    android:outlineProvider="background"
+                    android:clipToOutline="true"
+                    android:translationZ="40sp"
+                    android:paddingBottom="2dp"/>
+
+                <ImageView
+                    android:id="@+id/sunrise"
+                    android:layout_width="130dp"
+                    android:layout_height="160dp"
+                    android:layout_margin="10dp"
+                    android:clickable="true"
+                    android:contentDescription="@string/text5"
+                    android:focusable="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/sun"
+                    android:background="@drawable/image_background"
+                    android:elevation="40sp"
+                    android:outlineProvider="background"
+                    android:clipToOutline="true"
+                    android:translationZ="40sp"
+                    android:paddingBottom="2dp"/>
+
+                <ImageView
+                    android:id="@+id/stress"
+                    android:layout_width="130dp"
+                    android:layout_height="160dp"
+                    android:layout_margin="10dp"
+                    android:clickable="true"
+                    android:contentDescription="@string/text6"
+                    android:focusable="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/stress"
+                    android:background="@drawable/image_background"
+                    android:elevation="40sp"
+                    android:outlineProvider="background"
+                    android:clipToOutline="true"
+                    android:translationZ="40sp"
+                    android:paddingBottom="2dp"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="serif"
+                    android:gravity="center"
+                    android:text="Go Into Sleep"
+                    android:textColor="@color/beige" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="serif"
+                    android:gravity="center"
+                    android:text="Morning Calm"
+                    android:textColor="@color/beige" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="serif"
+                    android:gravity="center"
+                    android:text="Reframe Stress"
+                    android:textColor="@color/beige" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/watermeditation"
+                    android:layout_width="130dp"
+                    android:layout_height="160dp"
+                    android:layout_margin="10dp"
+                    android:clickable="true"
+                    android:contentDescription="@string/text7"
+                    android:focusable="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/water"
+                    android:background="@drawable/image_background"
+                    android:elevation="40sp"
+                    android:outlineProvider="background"
+                    android:clipToOutline="true"
+                    android:translationZ="40sp"
+                    android:paddingBottom="10dp" />
+
+                <ImageView
+                    android:id="@+id/soundhilling"
+                    android:layout_width="130dp"
+                    android:layout_height="160dp"
+                    android:layout_margin="10dp"
+                    android:clickable="true"
+                    android:contentDescription="@string/text8"
+                    android:focusable="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/sound"
+                    android:background="@drawable/image_background"
+                    android:elevation="40sp"
+                    android:outlineProvider="background"
+                    android:clipToOutline="true"
+                    android:translationZ="40sp"
+                    android:paddingBottom="2dp"/>
+
+                <ImageView
+                    android:id="@+id/yoga"
+                    android:layout_width="130dp"
+                    android:layout_height="160dp"
+                    android:layout_margin="10dp"
+                    android:clickable="true"
+                    android:contentDescription="@string/text9"
+                    android:focusable="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/yoga"
+                    android:background="@drawable/image_background"
+                    android:elevation="40sp"
+                    android:outlineProvider="background"
+                    android:clipToOutline="true"
+                    android:translationZ="40sp"
+                    android:paddingBottom="2dp"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="serif"
+                    android:gravity="center"
+                    android:text="Water Medi"
+                    android:textColor="@color/beige" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="serif"
+                    android:gravity="center"
+                    android:text="Sound Hilling"
+                    android:textColor="@color/beige" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="serif"
+                    android:gravity="center"
+                    android:text="Yoga"
+                    android:textColor="@color/beige" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/pregnant"
+                    android:layout_width="130dp"
+                    android:layout_height="160dp"
+                    android:layout_margin="10dp"
+                    android:clickable="true"
+                    android:contentDescription="pregnant yoga"
+                    android:focusable="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/pregnenat"
+                    android:background="@drawable/image_background"
+                    android:elevation="40sp"
+                    android:outlineProvider="background"
+                    android:clipToOutline="true"
+                    android:translationZ="40sp"
+                    android:paddingBottom="2dp"/>
+
+                <ImageView
+                    android:id="@+id/parent"
+                    android:layout_width="130dp"
+                    android:layout_height="160dp"
+                    android:layout_margin="10dp"
+                    android:clickable="true"
+                    android:contentDescription="parents role"
+                    android:focusable="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/parents"
+                    android:background="@drawable/image_background"
+                    android:elevation="40sp"
+                    android:outlineProvider="background"
+                    android:clipToOutline="true"
+                    android:translationZ="40sp"
+                    android:paddingBottom="2dp"/>
+
+                <ImageView
+                    android:id="@+id/mentalhealth"
+                    android:layout_width="130dp"
+                    android:layout_height="160dp"
+                    android:layout_margin="10dp"
+                    android:clickable="true"
+                    android:contentDescription="psychologist"
+                    android:focusable="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/dr"
+                    android:background="@drawable/image_background"
+                    android:elevation="40sp"
+                    android:outlineProvider="background"
+                    android:clipToOutline="true"
+                    android:translationZ="40sp"
+                    android:paddingBottom="2dp"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="serif"
+                    android:gravity="center"
+                    android:text="Pregnante Yoga"
+                    android:textColor="@color/beige" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="serif"
+                    android:gravity="center"
+                    android:text="Parent Role"
+                    android:textColor="@color/beige" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="serif"
+                    android:gravity="center"
+                    android:text="Psychologists"
+                    android:textColor="@color/beige" />
+            </TableRow>
+
+        </TableLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

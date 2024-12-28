@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="beige">#9E705F</color>
+    <color name="babygreen">#F1F5D8</color>
+    <color name="babymove">#EBF2FB</color>
+</resources>

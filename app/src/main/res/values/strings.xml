@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">Tea</string>
+    <!--start page-->
+    <string name="TEAtext">TEA</string>
+    <string name="hint">Enter Your Name</string>
+    <!--main page-->
+    <string name="meditatetext">Meditate</string>
+    <string name="button1">ALL</string>
+    <string name="button2">RELAX</string>
+    <string name="button3">MORNING</string>
+    <string name="button4">ACTIVITY</string>
+
+    <!--table pic -->
+    <string name="text1">Anxiety Release</string>
+    <string name="text2">Easing Depression</string>
+    <string name="text3">Beginning Meditation</string>
+
+    <string name="text4">Letting Go Into Sleep</string>
+    <string name="text5">7 Days Of Calm</string>
+    <string name="text6">Reframe Stress</string>
+
+    <string name="text7">Water Meditation</string>
+    <string name="text8">Sound Hilling Meditation</string>
+    <string name="text9">Yoga</string>
+
+    <string name="psycho">
+    Therapists and psychologists support mental health by assessing and diagnosing conditions, providing therapy like CBT for issues such as anxiety and trauma, and offering emotional support in safe, judgment-free spaces. They teach coping skills, manage crises like panic attacks, and promote awareness to reduce stigma and encourage preventive care.\n\n
+    • Assessment and Diagnosis:\n Evaluate mental health using interviews, questionnaires, and tests.\n
+    • Therapeutic Interventions:\n
+    • Provide counseling and psychotherapy (e.g., CBT) for issues like anxiety, depression, and trauma.\n
+    • Teach coping strategies, stress management, and problem-solving skills.\n
+    • Provide immediate support during mental health crises (e.g., suicidal ideation, panic attacks).\n
+    • Promote mental health awareness, reduce stigma, and guide preventive care efforts.\n\n
+    Psychologists:\n
+    1. Psychologist <b>Ahmed Al-Farsi</b>\n
+    - Specialization: Cognitive Behavioral Therapy (CBT) for anxiety and depression.\n
+    - Location: <a name="loc1" href="geo:0,0?q=Al-Madina+Psychological+Center,+Cairo,+Egypt">Al-Madina Psychological Center, Cairo, Egypt</a> \n
+    - Contact: <a href="tel:+2025551234">(+20) 2 555-1234</a>\n\n
+    2. Psychologist <b> Layla Zayed</b>\n
+    - Specialization: Family therapy and trauma recovery.\n
+    - Location: <a name="loc2" href="geo:0,0?q=Hope+Therapy+Clinic,+Dubai,+UAE">Hope Therapy Clinic, Dubai, UAE</a> \n
+    - Contact: <a href="tel:+97145556789">(+971) 4 555-6789</a>\n\n
+    3. Psychologist <b>Omar Khaled</b>\n
+    - Specialization: Child psychology and ADHD.\n
+    - Location: <a name="loc3" href="geo:0,0?q=Khaled+Psychological+Services,+Beirut,+Lebanon">Khaled Psychological Services, Beirut, Lebanon</a> \n
+    - Contact: <a href="tel:+96115554321">(+961) 1 555-4321</a>\n\n
+</string>
+
+</resources>

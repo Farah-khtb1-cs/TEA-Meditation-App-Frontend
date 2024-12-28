@@ -1,0 +1,24 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Shadow layer -->
+    <item
+        android:left="3dp"
+        android:right="3dp"
+        android:top="3dp"
+        android:bottom="3dp">
+        <shape>
+            <solid android:color="#80000000" /> <!-- Shadow color -->
+            <corners android:radius="25dp" />   <!-- Same corner radius as your main shape -->
+        </shape>
+    </item>
+
+    <!-- Original shape -->
+    <item>
+        <shape>
+            <solid android:color="#80000000" /> <!-- Main shape color -->
+            <stroke
+                android:color="@color/beige"
+                android:width="5dp" />
+            <corners android:radius="25dp" />
+        </shape>
+    </item>
+</layer-list>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/beige"
+    tools:context=".StartActivity">
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:fontFamily="@font/vollkorn_sc"
+        android:text="@string/TEAtext"
+        android:textColor="#F1F5D8"
+        android:textFontWeight="30"
+        android:textSize="70sp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextText2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputBackground" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/inputBackground"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="97dp"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextText2"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_marginBottom="10dp"
+        android:height="48dp"
+        android:autofillHints="name"
+        android:background="@drawable/edittext_border"
+        android:backgroundTint="@color/babygreen"
+        android:ems="10"
+        android:hint="@string/hint"
+        android:inputType="text"
+        android:paddingLeft="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/editText3"
+        app:layout_constraintEnd_toEndOf="@+id/editText3"
+        app:layout_constraintStart_toStartOf="@+id/editText3"
+        app:layout_constraintTop_toBottomOf="@+id/textView1" />
+    <!--android:imeOptions="actionDone"-->
+
+    <EditText
+        android:id="@+id/editText3"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/edittext_border"
+        android:backgroundTint="@color/babygreen"
+        android:hint="Enter your gmail"
+        android:inputType="textWebEmailAddress"
+        android:paddingLeft="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/editText4"
+        app:layout_constraintEnd_toEndOf="@+id/editText4"
+        app:layout_constraintStart_toStartOf="@+id/editText4"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText2" />
+
+    <EditText
+        android:id="@+id/editText4"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/edittext_border"
+        android:backgroundTint="@color/babygreen"
+        android:hint="Enter your password"
+        android:inputType="textPassword"
+        android:paddingLeft="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/myspi"
+        app:layout_constraintEnd_toEndOf="@+id/myspi"
+        app:layout_constraintStart_toStartOf="@+id/myspi"
+        app:layout_constraintTop_toBottomOf="@+id/editText3" />
+
+    <Spinner
+        android:id="@+id/myspi"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginEnd="26dp"
+        android:layout_marginBottom="0dp"
+        android:background="@drawable/edittext_border"
+        android:backgroundTint="@color/babygreen"
+        android:imeOptions="actionDone"
+        android:paddingLeft="10dp"
+        android:spinnerMode="dropdown"
+        app:layout_constraintBottom_toTopOf="@+id/editText5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText4" />
+
+    <TextView
+        android:id="@+id/editText5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="486dp"
+        android:gravity="center"
+        android:text="Already have an account? Sign in with"
+        android:textColor="@color/white"
+        android:textSize="17dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="148dp"
+        android:layout_marginBottom="149dp"
+        android:background="@drawable/rounded_button_background"
+        android:clipToOutline="true"
+        android:src="@drawable/facebookicon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView7"
+        app:layout_constraintTop_toBottomOf="@+id/editText5" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginEnd="17dp"
+        android:background="@drawable/rounded_button_background"
+        android:clipToOutline="true"
+        android:src="@drawable/googleicon"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView6"
+        app:layout_constraintEnd_toStartOf="@+id/imageView6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText5"
+        app:layout_constraintVertical_bias="1.0" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
