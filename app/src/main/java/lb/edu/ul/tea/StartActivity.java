@@ -34,7 +34,8 @@ import java.util.Locale;
 import java.util.Arrays;
 import java.util.Collection;
 
-//lala
+//lalalalaa
+
 
 public class StartActivity<StartActivity> extends AppCompatActivity {
 
