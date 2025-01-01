@@ -91,7 +91,7 @@
         app:layout_constraintTop_toBottomOf="@+id/button3">
 
         <TableLayout
-            android:id="@+id/main.2"
+            android:id="@+id/table"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -160,6 +160,7 @@
             </TableRow>
 
             <TableRow
+                android:id="@+id/row1"
                 android:layout_width="match_parent"
                 android:gravity="center">
 
@@ -190,42 +191,9 @@
             </TableRow>
 
             <TableRow
+                android:id="@+id/imagesrow"
                 android:layout_width="match_parent"
                 android:gravity="center">
-
-                <ImageView
-                    android:id="@+id/sleep"
-                    android:layout_width="130dp"
-                    android:layout_height="160dp"
-                    android:layout_margin="10dp"
-                    android:clickable="true"
-                    android:contentDescription="@string/text4"
-                    android:focusable="true"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/sleep"
-                    android:background="@drawable/image_background"
-                    android:elevation="40sp"
-                    android:outlineProvider="background"
-                    android:clipToOutline="true"
-                    android:translationZ="40sp"
-                    android:paddingBottom="2dp"/>
-
-                <ImageView
-                    android:id="@+id/sunrise"
-                    android:layout_width="130dp"
-                    android:layout_height="160dp"
-                    android:layout_margin="10dp"
-                    android:clickable="true"
-                    android:contentDescription="@string/text5"
-                    android:focusable="true"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/sun"
-                    android:background="@drawable/image_background"
-                    android:elevation="40sp"
-                    android:outlineProvider="background"
-                    android:clipToOutline="true"
-                    android:translationZ="40sp"
-                    android:paddingBottom="2dp"/>
 
                 <ImageView
                     android:id="@+id/stress"
@@ -233,7 +201,7 @@
                     android:layout_height="160dp"
                     android:layout_margin="10dp"
                     android:clickable="true"
-                    android:contentDescription="@string/text6"
+                    android:contentDescription="stress"
                     android:focusable="true"
                     android:scaleType="centerCrop"
                     android:src="@drawable/stress"
@@ -243,9 +211,45 @@
                     android:clipToOutline="true"
                     android:translationZ="40sp"
                     android:paddingBottom="2dp"/>
+
+                <ImageView
+                    android:id="@+id/parent"
+                    android:layout_width="130dp"
+                    android:layout_height="160dp"
+                    android:layout_margin="10dp"
+                    android:clickable="true"
+                    android:contentDescription="parents role"
+                    android:focusable="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/parents"
+                    android:background="@drawable/image_background"
+                    android:elevation="40sp"
+                    android:outlineProvider="background"
+                    android:clipToOutline="true"
+                    android:translationZ="40sp"
+                    android:paddingBottom="2dp"/>
+                <ImageView
+                    android:id="@+id/mentalhealth"
+                    android:layout_width="130dp"
+                    android:layout_height="160dp"
+                    android:layout_margin="10dp"
+                    android:clickable="true"
+                    android:contentDescription="psychologist"
+                    android:focusable="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/dr"
+                    android:background="@drawable/image_background"
+                    android:elevation="40sp"
+                    android:outlineProvider="background"
+                    android:clipToOutline="true"
+                    android:translationZ="40sp"
+                    android:paddingBottom="2dp"/>
+
+
             </TableRow>
 
             <TableRow
+                android:id="@+id/row2"
                 android:layout_width="match_parent"
                 android:gravity="center">
 
@@ -254,7 +258,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="serif"
                     android:gravity="center"
-                    android:text="Go Into Sleep"
+                    android:text="Reframe stress"
                     android:textColor="@color/beige" />
 
                 <TextView
@@ -262,7 +266,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="serif"
                     android:gravity="center"
-                    android:text="Morning Calm"
+                    android:text="Parent Role"
                     android:textColor="@color/beige" />
 
                 <TextView
@@ -270,7 +274,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="serif"
                     android:gravity="center"
-                    android:text="Reframe Stress"
+                    android:text="Psychologists"
                     android:textColor="@color/beige" />
             </TableRow>
 
@@ -331,6 +335,7 @@
             </TableRow>
 
             <TableRow
+                android:id="@+id/row3"
                 android:layout_width="match_parent"
                 android:gravity="center">
 
@@ -379,17 +384,16 @@
                     android:clipToOutline="true"
                     android:translationZ="40sp"
                     android:paddingBottom="2dp"/>
-
                 <ImageView
-                    android:id="@+id/parent"
+                    android:id="@+id/sunrise"
                     android:layout_width="130dp"
                     android:layout_height="160dp"
                     android:layout_margin="10dp"
                     android:clickable="true"
-                    android:contentDescription="parents role"
+                    android:contentDescription="@string/text5"
                     android:focusable="true"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/parents"
+                    android:src="@drawable/sun"
                     android:background="@drawable/image_background"
                     android:elevation="40sp"
                     android:outlineProvider="background"
@@ -397,16 +401,18 @@
                     android:translationZ="40sp"
                     android:paddingBottom="2dp"/>
 
+
+
                 <ImageView
-                    android:id="@+id/mentalhealth"
+                    android:id="@+id/sleep"
                     android:layout_width="130dp"
                     android:layout_height="160dp"
                     android:layout_margin="10dp"
                     android:clickable="true"
-                    android:contentDescription="psychologist"
+                    android:contentDescription="sleeping"
                     android:focusable="true"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/dr"
+                    android:src="@drawable/sleep"
                     android:background="@drawable/image_background"
                     android:elevation="40sp"
                     android:outlineProvider="background"
@@ -416,6 +422,7 @@
             </TableRow>
 
             <TableRow
+                android:id="@+id/row4"
                 android:layout_width="match_parent"
                 android:gravity="center">
 
@@ -426,22 +433,24 @@
                     android:gravity="center"
                     android:text="Pregnante Yoga"
                     android:textColor="@color/beige" />
-
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="serif"
                     android:gravity="center"
-                    android:text="Parent Role"
+                    android:text="Morning Calm"
                     android:textColor="@color/beige" />
-
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="serif"
                     android:gravity="center"
-                    android:text="Psychologists"
+                    android:text="Go Into Sleep"
                     android:textColor="@color/beige" />
+
+
+
+
             </TableRow>
 
         </TableLayout>

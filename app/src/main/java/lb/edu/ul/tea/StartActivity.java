@@ -34,9 +34,6 @@ import java.util.Locale;
 import java.util.Arrays;
 import java.util.Collection;
 
-//lalalalaa
-
-
 public class StartActivity<StartActivity> extends AppCompatActivity {
 
     private Object requestPermissionLauncher;
