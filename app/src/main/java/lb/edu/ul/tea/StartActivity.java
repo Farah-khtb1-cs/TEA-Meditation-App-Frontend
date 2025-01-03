@@ -19,6 +19,7 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -59,24 +60,21 @@ public class StartActivity<StartActivity> extends AppCompatActivity {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnercountries.setAdapter(adapter);
 
-        spinnercountries.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+
+        Button signupbutton=findViewById(R.id.signup);
+        signupbutton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if(position>0){
-                Intent intent =new Intent(lb.edu.ul.tea.StartActivity.this, MainActivity.class);
-                intent.putExtra("selectedCountry", countryList.get(position));
-                startActivity(intent);
+            public void onClick(View v) {
+                int position = spinnercountries.getSelectedItemPosition(); // Get the selected position
+                if (position > 0) { // Check if a valid country is selected
+                    Intent intent = new Intent(lb.edu.ul.tea.StartActivity.this, MainActivity.class);
+                    intent.putExtra("selectedCountry", countryList.get(position)); // Pass the selected country
+                    startActivity(intent);
+                } else {
+                    Toast.makeText(lb.edu.ul.tea.StartActivity.this, "Please select a country first.", Toast.LENGTH_SHORT).show();
                 }
             }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-                Toast.makeText(lb.edu.ul.tea.StartActivity.this, "Nothing Selected", Toast.LENGTH_SHORT).show();
-
-            }
         });
-
-
 
 
 
