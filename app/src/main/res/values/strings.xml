@@ -45,5 +45,7 @@
     - Location: <a name="loc3" href="geo:0,0?q=Khaled+Psychological+Services,+Beirut,+Lebanon">Khaled Psychological Services, Beirut, Lebanon</a> \n
     - Contact: <a href="tel:+96115554321">(+961) 1 555-4321</a>\n\n
 </string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

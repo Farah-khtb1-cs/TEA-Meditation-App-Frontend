@@ -115,7 +115,7 @@
         android:layout_marginTop="7dp"
         android:backgroundTint="@color/babygreen"
         android:gravity="center"
-        android:text="sign Up"
+        android:text="Sign Up"
         android:clickable="true"
         android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/editText5"
