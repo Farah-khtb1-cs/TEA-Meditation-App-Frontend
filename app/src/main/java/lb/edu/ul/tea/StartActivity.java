@@ -38,8 +38,8 @@ public class StartActivity extends AppCompatActivity {
         // Initialize UI components
         Spinner spinnerCountries = findViewById(R.id.myspi);
         EditText editTextUsername = findViewById(R.id.editTextText2);
-        EditText editTextEmail = findViewById(R.id.editText4);
-        EditText editTextPassword = findViewById(R.id.editText3);
+        EditText editTextEmail = findViewById(R.id.editText3);
+        EditText editTextPassword = findViewById(R.id.editText4);
         Button signupButton = findViewById(R.id.signup);
 
         // Populate the spinner with country names

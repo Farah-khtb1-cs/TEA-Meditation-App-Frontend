@@ -19,6 +19,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -40,42 +41,38 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-
-
-
-        ImageView imageAnexiety =findViewById(R.id.anxiety);
+        ImageView imageAnexiety = findViewById(R.id.anxiety);
         imageAnexiety.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent I=new Intent(MainActivity.this, Anexiety.class);
+                Intent I = new Intent(MainActivity.this, Anexiety.class);
                 startActivity(I);
             }
         });
-        ImageView imageDr =findViewById(R.id.mentalhealth);
+        ImageView imageDr = findViewById(R.id.mentalhealth);
         imageDr.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent I=new Intent(MainActivity.this, psychologists.class);
+                Intent I = new Intent(MainActivity.this, psychologists.class);
                 startActivity(I);
             }
         });
 
         ImageView profile = findViewById(R.id.profilebutton);
         profile.setOnClickListener(v -> {
-            Intent I = new Intent(MainActivity.this, Profile.class);
+            Intent I = new Intent(MainActivity.this, profile1.class);
             startActivityForResult(I, 1000);
         });
 
         Button allButton = findViewById(R.id.button1);
         Button guidelinesButton = findViewById(R.id.button2);
         TableLayout tableLayout = findViewById(R.id.table);
-        TableRow row2 =findViewById(R.id.row2);
-        TableRow row3 =findViewById(R.id.row3);
-        TableRow row4 =findViewById(R.id.row4);
-        TableRow row1 =findViewById(R.id.row1);
+        TableRow row2 = findViewById(R.id.row2);
+        TableRow row3 = findViewById(R.id.row3);
+        TableRow row4 = findViewById(R.id.row4);
+        TableRow row1 = findViewById(R.id.row1);
 
         TableRow imagesrow = findViewById(R.id.imagesrow);
-
 
 
         View anxiety = findViewById(R.id.anxiety);
@@ -93,25 +90,23 @@ public class MainActivity extends AppCompatActivity {
 
 
         allButton.setOnClickListener(v -> {
-                // Make all buttons visible
-                anxiety.setVisibility(View.VISIBLE);
-                depression.setVisibility(View.VISIBLE);
-                superSensors.setVisibility(View.VISIBLE);
-                reframeStress.setVisibility(View.VISIBLE);
-                parentRole.setVisibility(View.VISIBLE);
-                psychologist.setVisibility(View.VISIBLE);
-                goToSleep.setVisibility(View.VISIBLE);
-                morningCalm.setVisibility(View.VISIBLE);
-                waterMeditation.setVisibility(View.VISIBLE);
-                soundHealing.setVisibility(View.VISIBLE);
-                yoga.setVisibility(View.VISIBLE);
-                pregnant.setVisibility(View.VISIBLE);
-                row1.setVisibility(View.VISIBLE);
-                row2.setVisibility(View.VISIBLE);
-                row3.setVisibility(View.VISIBLE);
-                row4.setVisibility(View.VISIBLE);
-
-
+            // Make all buttons visible
+            anxiety.setVisibility(View.VISIBLE);
+            depression.setVisibility(View.VISIBLE);
+            superSensors.setVisibility(View.VISIBLE);
+            reframeStress.setVisibility(View.VISIBLE);
+            parentRole.setVisibility(View.VISIBLE);
+            psychologist.setVisibility(View.VISIBLE);
+            goToSleep.setVisibility(View.VISIBLE);
+            morningCalm.setVisibility(View.VISIBLE);
+            waterMeditation.setVisibility(View.VISIBLE);
+            soundHealing.setVisibility(View.VISIBLE);
+            yoga.setVisibility(View.VISIBLE);
+            pregnant.setVisibility(View.VISIBLE);
+            row1.setVisibility(View.VISIBLE);
+            row2.setVisibility(View.VISIBLE);
+            row3.setVisibility(View.VISIBLE);
+            row4.setVisibility(View.VISIBLE);
 
 
         });
@@ -138,27 +133,52 @@ public class MainActivity extends AppCompatActivity {
             row4.setVisibility(View.GONE);
 
 
+        });
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
+        bottomNavigationView.setOnNavigationItemSelectedListener(item -> {
+            Fragment selectedFragment = null;
 
+            // Handle profile fragment
+            if (item.getItemId() == R.id.nav_profile) {
+                // Check if the profile fragment is already in the fragment manager
+                Fragment currentFragment = getSupportFragmentManager().findFragmentByTag(profile1.class.getSimpleName());
 
+                if (currentFragment != null && currentFragment.isVisible()) {
+                    // If the fragment is already visible, pop it from the back stack to close it
+                    getSupportFragmentManager().popBackStack();
+                    return true;  // Do nothing more if we just close the fragment
+                }
+
+                // Otherwise, replace with the new profile1 fragment
+                selectedFragment = new profile1();
+            }
+
+            // Handle home fragment
+            if (item.getItemId() == R.id.nav_home) {
+                // If home button is clicked, go back to the Main Activity
+                Intent intent = new Intent(this, MainActivity.class);  // Replace MainActivity with your actual activity class
+                startActivity(intent);  // Start the Main Activity
+                finish();  // Optionally, you can call finish() to close the current activity if you don't want it in the back stack
+                return true;
+            }
+
+            // If a fragment is selected, perform the fragment transaction
+            if (selectedFragment != null) {
+                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+                transaction.replace(R.id.fragment_container, selectedFragment, profile1.class.getSimpleName()); // Tag the fragment
+                transaction.addToBackStack(null);  // Optional, if you want to keep fragment history
+                transaction.commit();
+            }
+
+            return true;  // Return true to indicate item selection was handled
         });
 
-
-
-
-
-
     }
 
-    private boolean loadFragment(Fragment fragment) {
-        if (fragment != null) {
-            getSupportFragmentManager()
-                    .beginTransaction()
-                    .replace(R.id.fragment_container, fragment)
-                    .commit();
-            return true;
-        }
-        return false;
-    }
+
+
+
+
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
