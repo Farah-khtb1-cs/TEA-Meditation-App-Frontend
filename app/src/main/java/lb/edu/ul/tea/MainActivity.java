@@ -155,11 +155,12 @@ public class MainActivity extends AppCompatActivity {
 
             // Handle home fragment
             if (item.getItemId() == R.id.nav_home) {
-                // If home button is clicked, go back to the Main Activity
-                Intent intent = new Intent(this, MainActivity.class);  // Replace MainActivity with your actual activity class
-                startActivity(intent);  // Start the Main Activity
-                finish();  // Optionally, you can call finish() to close the current activity if you don't want it in the back stack
-                return true;
+                Fragment currentFragment = getSupportFragmentManager().findFragmentByTag(profile1.class.getSimpleName());
+                if (currentFragment != null && currentFragment.isVisible()) {
+                    // If the fragment is already visible, pop it from the back stack to close it
+                    getSupportFragmentManager().popBackStack();
+                    return true;  // Do nothing more if we just close the fragment
+                }
             }
 
             // If a fragment is selected, perform the fragment transaction
