@@ -33,6 +33,7 @@
         android:layout_marginTop="15dp"
         android:gravity="center"
         android:text="TEA MEDITATION"
+        android:fontFamily="@font/vollkorn_sc"
         android:textColor="#9E705F"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
