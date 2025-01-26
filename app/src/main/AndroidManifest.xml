@@ -18,8 +18,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Tea"
         tools:targetApi="31">
-
-
+        <activity
+            android:name=".yoga_ex"
+            android:exported="false" />
+        <activity
+            android:name=".yoga1"
+            android:exported="false" />
         <activity
             android:name=".Profile"
             android:exported="false" />

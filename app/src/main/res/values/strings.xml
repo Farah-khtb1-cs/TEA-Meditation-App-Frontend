@@ -48,4 +48,17 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    <string name="Welcome">Welcome <b>Yuliana</b></string>
+    <string name="setCategory">Set categories</string>
+    <string name="seeAll">See all</string>
+    <string name="exercice1">Low Train</string>
+    <string name="exercice2">Meditation</string>
+    <string name="exercice3">Breathing</string>
+    <string name="Exercice">Exercice</string>
+    <string name="Cardio">Cardio</string>
+    <string name="legs">legs</string>
+    <string name="back">back</string>
+    <string name="press">press</string>
+    <string name="triceps">triceps</string>
+
 </resources>

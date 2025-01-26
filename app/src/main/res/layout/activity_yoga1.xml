@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Yoga1"
+    android:padding="30dp"
+    android:background="@color/beige"
+    >
+
+
+    <TableRow
+        android:layout_marginTop="40dp">
+        <TextView
+            android:id="@+id/SetCategoryText"
+            android:layout_width="0dp"
+            android:text="@string/setCategory"
+            android:layout_weight="4"
+            android:textColor="@color/babygreen"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:fontFamily="@font/vollkorn_sc"
+            android:textSize="20sp"
+            android:paddingLeft="5dp"
+            >
+        </TextView>
+        <TextView
+            android:id="@+id/seeAllText"
+            android:text="@string/seeAll"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:textColor="@color/babygreen"
+            android:layout_gravity="center"
+            android:fontFamily="@font/vollkorn_sc"
+            android:textSize="17sp"
+            ></TextView>
+    </TableRow>
+
+    <TableRow
+        android:layout_marginTop="10dp"
+        >
+        <LinearLayout
+            android:elevation="4dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginRight="10dp"
+            android:backgroundTint="@color/babygreen"
+            android:background="@drawable/rounded_corners"
+            >
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/exercice1"
+                android:textColor="@color/black"
+                android:fontFamily="@font/vollkorn_sc"
+                android:textSize="17sp"
+                android:layout_marginBottom="8dp"
+                />
+            <ImageButton
+                android:id="@+id/ImageExercice1"
+                android:src="@drawable/image_exercice1"
+                android:backgroundTint="@color/babygreen"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:scaleType="fitCenter"
+                android:layout_marginBottom="16dp"
+                android:contentDescription="Description of the image"
+                ></ImageButton>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:elevation="4dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginRight="10dp"
+            android:backgroundTint="@color/babygreen"
+            android:background="@drawable/rounded_corners">
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/exercice2"
+                android:textColor="@color/black"
+                android:layout_marginBottom="8dp"
+                android:textSize="17sp"
+                android:fontFamily="@font/vollkorn_sc"/>
+            <ImageButton
+                android:id="@+id/ImageExercice2"
+                android:src="@drawable/image_exercice2"
+                android:backgroundTint="@color/babygreen"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:scaleType="fitCenter"
+                android:layout_marginBottom="16dp"
+                android:contentDescription="Description of the image"
+                ></ImageButton>
+        </LinearLayout>
+
+        <LinearLayout
+            android:elevation="4dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:backgroundTint="@color/babygreen"
+            android:background="@drawable/rounded_corners">
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/exercice3"
+                android:textColor="@color/black"
+                android:layout_marginBottom="8dp"
+                android:textSize="17sp"
+                android:fontFamily="@font/vollkorn_sc"
+                />
+            <ImageButton
+                android:id="@+id/ImageExercice3"
+                android:src="@drawable/image_exercice3"
+                android:backgroundTint="@color/babygreen"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:scaleType="fitCenter"
+                android:layout_marginBottom="16dp"
+                android:contentDescription="Description of the image"></ImageButton>
+        </LinearLayout>
+    </TableRow>
+    <TableRow
+        android:layout_marginTop="15dp">
+        <TextView
+            android:id="@+id/exerciceHeader"
+            android:layout_width="0dp"
+            android:text="@string/Exercice"
+            android:textColor="@color/babygreen"
+            android:fontFamily="@font/vollkorn_sc"
+            android:paddingLeft="5dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_weight="1"
+            ></TextView>
+    </TableRow>
+
+    <TableRow
+        android:layout_width="0dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:backgroundTint="@color/babygreen"
+        android:background="@drawable/rounded_corners"
+        android:layout_weight="1">
+        <HorizontalScrollView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:scrollbars="horizontal"
+            android:scrollbarStyle="outsideInset">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="5dp"
+                >
+
+                <TextView
+                    android:id="@+id/tv_cardio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Cardio"
+                    android:fontFamily="@font/vollkorn_sc"
+                    android:textSize="17sp"
+                    android:textColor="@color/black"
+                    android:padding="8dp"
+                    android:layout_marginRight="45dp"/>
+
+                <TextView
+                    android:id="@+id/tv_legs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/legs"
+                    android:fontFamily="@font/vollkorn_sc"
+                    android:textSize="17sp"
+                    android:textColor="@color/black"
+                    android:padding="8dp"
+                    android:layout_marginRight="45dp"/>
+
+                <TextView
+                    android:id="@+id/tv_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/back"
+                    android:fontFamily="@font/vollkorn_sc"
+                    android:textSize="17sp"
+                    android:textColor="@color/black"
+                    android:padding="8dp"
+                    android:layout_marginRight="45dp"/>
+
+                <TextView
+                    android:id="@+id/tv_press"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/press"
+                    android:fontFamily="@font/vollkorn_sc"
+                    android:textSize="17sp"
+                    android:textColor="@color/black"
+                    android:padding="8dp"
+                    android:layout_marginRight="45dp"/>
+
+                <TextView
+                    android:id="@+id/tv_triceps"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/triceps"
+                    android:fontFamily="@font/vollkorn_sc"
+                    android:textSize="17sp"
+                    android:textColor="@color/black"
+                    android:padding="8dp"
+                    android:layout_marginRight="45dp"/>
+            </LinearLayout>
+        </HorizontalScrollView>
+    </TableRow>
+    <TableRow
+        android:id="@+id/row1"
+        android:layout_marginTop="10dp"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:backgroundTint="@color/babygreen"
+        android:background="@drawable/rounded_corners"
+        >
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:background="@drawable/rounded_corners"
+            android:layout_marginLeft="10dp"
+            android:backgroundTint="#FFE5D9"
+            android:elevation="4dp"
+            android:padding="8dp"
+            android:src="@drawable/pushup"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="16dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Push ups"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="4dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="45 sec"
+                    android:textColor="#757575"
+                    android:drawableLeft="@drawable/timer"
+                    android:drawablePadding="4dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2 reps"
+                    android:textColor="#757575"
+                    android:drawableLeft="@drawable/repeat"
+                    android:drawablePadding="4dp"
+                    android:layout_marginLeft="16dp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/arrow_right"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="8dp"/>
+    </TableRow>
+
+    <!-- Scissors row -->
+    <TableRow
+        android:id="@+id/row2"
+        android:layout_marginTop="10dp"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:onClick="exerciceHandler"
+        android:backgroundTint="@color/babygreen"
+        android:background="@drawable/rounded_corners">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:background="@drawable/rounded_corners"
+            android:layout_marginLeft="10dp"
+            android:backgroundTint="#F0F0FF"
+            android:elevation="4dp"
+            android:padding="8dp"
+            android:src="@drawable/scissors"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="16dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Scissors"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="4dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="45 sec"
+                    android:textColor="#757575"
+                    android:drawableLeft="@drawable/timer"
+                    android:drawablePadding="4dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2 reps"
+                    android:textColor="#757575"
+                    android:drawableLeft="@drawable/repeat"
+                    android:drawablePadding="4dp"
+                    android:layout_marginLeft="16dp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/buttonOfExercice"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/arrow_right"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="8dp"
+            />
+    </TableRow>
+
+    <!-- Warping row -->
+    <TableRow
+        android:id="@+id/row3"
+        android:layout_marginTop="10dp"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="@color/babygreen"
+        android:background="@drawable/rounded_corners"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:background="@drawable/rounded_corners"
+            android:backgroundTint="#FFE5D9"
+            android:layout_marginLeft="10dp"
+            android:elevation="4dp"
+            android:padding="8dp"
+            android:src="@drawable/wraping"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="16dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Warping"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="4dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="45 sec"
+                    android:textColor="#757575"
+                    android:drawableLeft="@drawable/timer"
+                    android:drawablePadding="4dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2 reps"
+                    android:textColor="#757575"
+                    android:drawableLeft="@drawable/repeat"
+                    android:drawablePadding="4dp"
+                    android:layout_marginLeft="16dp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/arrow_right"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="8dp"/>
+    </TableRow>
+</TableLayout>

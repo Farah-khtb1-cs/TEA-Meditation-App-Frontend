@@ -1,3 +1,4 @@
+
 package lb.edu.ul.tea;
 
 import android.content.Intent;
@@ -23,6 +24,7 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import java.time.Year;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
@@ -41,6 +43,8 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+
+
         ImageView imageAnexiety = findViewById(R.id.anxiety);
         imageAnexiety.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,8 +53,8 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(I);
             }
         });
-        ImageView imageDr = findViewById(R.id.mentalhealth);
-        imageDr.setOnClickListener(new View.OnClickListener() {
+        ImageView psych = findViewById(R.id.mentalhealth);
+        psych.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent I = new Intent(MainActivity.this, psychologists.class);
@@ -174,8 +178,16 @@ public class MainActivity extends AppCompatActivity {
             return true;  // Return true to indicate item selection was handled
         });
 
-    }
+        yoga.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent I=new Intent(MainActivity.this, yoga1.class);
+                startActivity(I);
+            }
+        });
 
+
+    }
 
 
 
@@ -190,7 +202,9 @@ public class MainActivity extends AppCompatActivity {
                 // Use the retrieved name here
             }
         }
+
     }
 
 
 }
+

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/beige"
+    >
+
+    <!-- VideoView for displaying the exercise video -->
+    <VideoView
+        android:id="@+id/videoView"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@color/black" />
+
+    <!-- Timer TextView -->
+    <TextView
+        android:id="@+id/timerTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/videoView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="00:45"
+        android:textSize="24sp"
+        android:textColor="#2F2947"
+        android:textStyle="bold" />
+
+    <!-- Counter TextView -->
+    <TextView
+        android:id="@+id/counterTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/timerTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Reps: 0"
+        android:textSize="20sp"
+        android:textColor="#2F2947" />
+
+    <!-- Start/Pause Button -->
+    <Button
+        android:id="@+id/startPauseButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/counterTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Start"
+        android:textSize="18sp"
+        android:backgroundTint="#2F2947"
+        android:textColor="#FFFFFF"
+        android:padding="10dp" />
+
+</RelativeLayout>
