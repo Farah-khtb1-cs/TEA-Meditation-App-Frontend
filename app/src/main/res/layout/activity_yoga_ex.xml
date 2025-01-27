@@ -13,7 +13,6 @@
         android:layout_height="300dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
-        android:src="@raw/exercise_video"
         android:background="@color/black" />
 
     <!-- Timer TextView -->
