@@ -61,4 +61,14 @@
     <string name="press">press</string>
     <string name="triceps">triceps</string>
 
+    <string name="s1">Play</string>
+
+    <string name="s5">Welcome to audios page</string>
+    <string name="s10">Whispers of Harmony</string>
+    <string name="s11">Echoes of Serenity</string>
+    <string name="s12">Harmonic Bliss</string>
+    <string name="s13">Crystal Waves</string>
+    <string name="s20">Relax</string>
+    <string name="s30">Favorite Songs</string>
+
 </resources>

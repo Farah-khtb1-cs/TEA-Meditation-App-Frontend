@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".Yoga1"
     android:padding="30dp"
-    android:background="@color/beige"
+    android:background="#F7D6D8"
     >
 
 
@@ -292,9 +292,11 @@
         </LinearLayout>
 
         <ImageButton
+            android:id="@+id/heart11"
+           android:layout_marginRight="10dp"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:src="@drawable/arrow_right"
+            android:src="@drawable/ic_favorite_border"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:padding="8dp"/>
     </TableRow>
@@ -363,10 +365,11 @@
         </LinearLayout>
 
         <ImageButton
-            android:id="@+id/buttonOfExercice"
+            android:id="@+id/heart22"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:src="@drawable/arrow_right"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/ic_favorite_border"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:padding="8dp"
             />
@@ -436,9 +439,11 @@
         </LinearLayout>
 
         <ImageButton
+            android:id="@+id/heart33"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:src="@drawable/arrow_right"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/ic_favorite_border"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:padding="8dp"/>
     </TableRow>

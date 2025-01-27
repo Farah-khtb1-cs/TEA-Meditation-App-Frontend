@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#EFF3E6">
+
+    <ImageView
+        android:id="@+id/playimagee"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_marginTop="75dp"
+        android:clickable="true"
+        android:contentDescription="supersensers heal"
+        android:focusable="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/supersenser"
+        android:background="@drawable/image_background"
+        android:elevation="8dp"
+        android:outlineProvider="background"
+        android:clipToOutline="true"
+        android:translationZ="40dp"
+        android:paddingBottom="2dp"
+        android:foreground="@drawable/soundhealling2" />
+
+    <TextView
+        android:id="@+id/Relax"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="RELAX"
+        android:fontFamily="@font/vollkorn_sc"
+        android:textColor="@color/beige"
+        android:textStyle="italic"
+        android:textSize="40sp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/feelthesound2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/beige"
+        android:textStyle="italic"
+        android:textSize="20sp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/playPauseButton"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/playy"
+            android:contentDescription="Play Button" />
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/playPauseButton"
+            android:layout_marginTop="21dp"
+            android:outlineSpotShadowColor="@color/beige" />
+    </RelativeLayout>
+</LinearLayout>

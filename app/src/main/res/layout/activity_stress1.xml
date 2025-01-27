@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#D1D1D1">
+
+    <ImageView
+        android:id="@+id/welcometoaudiospageimage"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="75dp"
+        android:background="@drawable/image_background"
+        android:clickable="true"
+        android:clipToOutline="true"
+        android:contentDescription="supersensers heal"
+        android:elevation="7dp"
+        android:focusable="true"
+        android:foreground="@drawable/soundhealling1"
+        android:outlineProvider="background"
+        android:paddingBottom="2dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/supersenser"
+        android:translationZ="40dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rounded_corners"
+        android:backgroundTint="@color/babygreen"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:elevation="5dp"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/audioredefined"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/image_background"
+            android:clickable="true"
+            android:clipToOutline="true"
+            android:contentDescription="supersensers heal"
+            android:elevation="40dp"
+            android:focusable="true"
+            android:foreground="@drawable/soundhealling2"
+            android:outlineProvider="background"
+            android:paddingBottom="2dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/supersenser"
+            android:translationZ="40dp" />
+
+        <TextView
+            android:id="@+id/textView101"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+
+            android:text="@string/s13"
+            android:textColor="@color/beige"
+            android:textSize="13sp"
+            />
+
+        <Button
+            android:id="@+id/playAudioButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:backgroundTint="@color/beige"
+            android:text="@string/s1" />
+
+        <ImageView
+
+            android:id="@+id/heart1"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="16dp"
+            android:contentDescription="Heart Button"
+            android:src="@drawable/ic_favorite_border" />
+
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:background="@drawable/rounded_corners"
+        android:elevation="5dp"
+        android:backgroundTint="@color/babygreen"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/feelthesound"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/image_background"
+            android:clickable="true"
+            android:clipToOutline="true"
+            android:contentDescription="supersensers heal"
+            android:elevation="40dp"
+            android:focusable="true"
+            android:foreground="@drawable/soundhealling3"
+            android:outlineProvider="background"
+            android:paddingBottom="2dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/supersenser"
+            android:translationZ="40dp" />
+
+        <TextView
+            android:id="@+id/textView102"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/s10"
+            android:textColor="@color/beige"
+            android:textSize="13sp" />
+
+        <Button
+            android:id="@+id/playAudioButton2"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:backgroundTint="@color/beige"
+            android:text="@string/s1"
+            android:textColor="@color/white" />
+
+        <ImageView
+            android:id="@+id/heart2"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="16dp"
+            android:contentDescription="Heart Button"
+            android:src="@drawable/ic_favorite_border" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_corners"
+        android:backgroundTint="@color/babygreen"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:elevation="5dp"
+        android:layout_marginTop="10dp"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/unleashthepower"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/image_background"
+            android:clickable="true"
+            android:clipToOutline="true"
+            android:contentDescription="supersensers heal"
+            android:elevation="40dp"
+            android:focusable="true"
+            android:foreground="@drawable/soundhealling4"
+            android:outlineProvider="background"
+            android:paddingBottom="2dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/supersenser"
+            android:translationZ="40dp" />
+
+        <TextView
+            android:id="@+id/textView103"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+
+            android:text="@string/s11"
+            android:textColor="@color/beige"
+            android:textSize="13sp" />
+
+
+        <Button
+            android:id="@+id/playAudioButton3"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:backgroundTint="@color/beige"
+            android:text="@string/s1" />
+
+        <ImageView
+            android:id="@+id/heart3"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="16dp"
+            android:contentDescription="Heart Button"
+            android:src="@drawable/ic_favorite_border" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:elevation="5dp"
+        android:background="@drawable/rounded_corners"
+        android:backgroundTint="@color/babygreen"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/whereeverynote"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/image_background"
+            android:clickable="true"
+            android:clipToOutline="true"
+            android:contentDescription="supersensers heal"
+            android:elevation="40dp"
+            android:focusable="true"
+            android:foreground="@drawable/soundhiealling5"
+            android:outlineProvider="background"
+            android:paddingBottom="2dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/supersenser"
+            android:translationZ="40dp" />
+
+        <TextView
+            android:id="@+id/textView104"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/s12"
+            android:textColor="@color/beige"
+            android:textSize="13sp" />
+
+        <Button
+            android:id="@+id/playAudioButton4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginRight="10dp"
+            android:backgroundTint="@color/beige"
+            android:text="@string/s1"
+            android:textColor="@color/white" />
+
+        <ImageView
+            android:id="@+id/heart4"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="16dp"
+            android:contentDescription="Heart Button"
+            android:src="@drawable/ic_favorite_border" />
+
+
+    </LinearLayout>
+
+</LinearLayout>
+

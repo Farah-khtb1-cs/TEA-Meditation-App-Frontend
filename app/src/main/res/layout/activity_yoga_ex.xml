@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
-    android:background="@color/beige"
+    android:background="#F0B0B6"
     >
 
     <!-- VideoView for displaying the exercise video -->
@@ -50,7 +50,7 @@
         android:layout_marginTop="20dp"
         android:text="Start"
         android:textSize="18sp"
-        android:backgroundTint="@color/white"
+        android:backgroundTint="@color/babygreen"
         android:textColor="@color/beige"
         android:padding="10dp" />
 

@@ -68,6 +68,13 @@ public class MainActivity extends AppCompatActivity {
             startActivityForResult(I, 1000);
         });
 
+        ImageView stress=findViewById(R.id.soundhilling);
+        stress.setOnClickListener(v -> {
+            Intent I = new Intent(MainActivity.this, stress1.class);
+            startActivity(I);
+        });
+
+
         Button allButton = findViewById(R.id.button1);
         Button guidelinesButton = findViewById(R.id.button2);
         TableLayout tableLayout = findViewById(R.id.table);
