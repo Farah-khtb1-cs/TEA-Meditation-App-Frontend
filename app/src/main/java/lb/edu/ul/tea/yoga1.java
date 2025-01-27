@@ -42,12 +42,6 @@ public class yoga1 extends AppCompatActivity {
             textView.setOnClickListener(v -> setSelection(textView));
         }
 
-        // Handle TableRow click
-        TableRow R1 = findViewById(R.id.row1);
-        R1.setOnClickListener(v -> {
-            Intent intent = new Intent(yoga1.this, yoga_ex.class);
-            startActivity(intent);
-        });
     }
 
     private void setSelection(TextView selectedTextView) {

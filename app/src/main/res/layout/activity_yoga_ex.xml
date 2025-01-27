@@ -13,6 +13,7 @@
         android:layout_height="300dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
+        android:src="@raw/exercise_video"
         android:background="@color/black" />
 
     <!-- Timer TextView -->
@@ -25,7 +26,7 @@
         android:layout_marginTop="20dp"
         android:text="00:45"
         android:textSize="24sp"
-        android:textColor="#2F2947"
+        android:textColor="@color/babygreen"
         android:textStyle="bold" />
 
     <!-- Counter TextView -->
@@ -38,7 +39,7 @@
         android:layout_marginTop="20dp"
         android:text="Reps: 0"
         android:textSize="20sp"
-        android:textColor="#2F2947" />
+        android:textColor="@color/babygreen" />
 
     <!-- Start/Pause Button -->
     <Button
@@ -50,8 +51,8 @@
         android:layout_marginTop="20dp"
         android:text="Start"
         android:textSize="18sp"
-        android:backgroundTint="#2F2947"
-        android:textColor="#FFFFFF"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/beige"
         android:padding="10dp" />
 
 </RelativeLayout>
