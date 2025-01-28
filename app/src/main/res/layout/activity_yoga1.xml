@@ -14,6 +14,7 @@
     <TableRow
         android:layout_marginTop="40dp">
         <TextView
+            android:elevation="4dp"
             android:id="@+id/SetCategoryText"
             android:layout_width="0dp"
             android:text="@string/setCategory"
@@ -40,9 +41,12 @@
 
     <TableRow
         android:layout_marginTop="10dp"
+        android:layout_margin="5dp"
+        android:padding="7dp"
         >
         <LinearLayout
-            android:elevation="10dp"
+
+            android:elevation="20dp"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -76,7 +80,7 @@
 
         <LinearLayout
             android:layout_width="0dp"
-            android:elevation="10dp"
+            android:elevation="20dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="vertical"
@@ -106,7 +110,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:elevation="10dp"
+            android:elevation="20dp"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -138,6 +142,7 @@
     <TableRow
         android:layout_marginTop="15dp">
         <TextView
+            android:elevation="4dp"
             android:id="@+id/exerciceHeader"
             android:layout_width="0dp"
             android:text="@string/Exercice"
@@ -168,8 +173,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
+                android:layout_margin="3dp"
                 android:paddingLeft="5dp"
-                android:elevation="15dp"
+                android:elevation="10dp"
                 >
 
                 <TextView

@@ -15,6 +15,9 @@
         android:id="@+id/image1"
         android:layout_width="wrap_content"
         android:layout_height="277dp"
+        android:elevation="10dp"
+        android:backgroundTint="@color/white"
+        android:background="@drawable/rounded_corners"
         android:src="@drawable/therapist" />
     <TextView
         android:id="@+id/psychoText"
@@ -23,6 +26,7 @@
         android:text="@string/psycho"
         android:autoLink="all"
         android:linksClickable="true"
+        android:elevation="8dp"
         android:padding="16dp"
         android:textSize="18sp"
         android:textColor="@color/beige"

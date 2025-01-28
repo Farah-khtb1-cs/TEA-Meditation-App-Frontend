@@ -61,6 +61,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
+            android:elevation="4dp"
 
             android:text="@string/s13"
             android:textColor="@color/beige"
@@ -73,6 +74,7 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="10dp"
             android:backgroundTint="@color/beige"
+            android:elevation="4dp"
             android:text="@string/s1" />
 
         <ImageView
@@ -121,13 +123,14 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
+            android:elevation="4dp"
             android:text="@string/s10"
             android:textColor="@color/beige"
             android:textSize="13sp" />
 
         <Button
             android:id="@+id/playAudioButton2"
-
+            android:elevation="4dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="10dp"
@@ -179,6 +182,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
+            android:elevation="4dp"
 
             android:text="@string/s11"
             android:textColor="@color/beige"
@@ -187,6 +191,7 @@
 
         <Button
             android:id="@+id/playAudioButton3"
+            android:elevation="4dp"
 
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -238,6 +243,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
+            android:elevation="4dp"
             android:text="@string/s12"
             android:textColor="@color/beige"
             android:textSize="13sp" />
@@ -246,6 +252,7 @@
             android:id="@+id/playAudioButton4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:elevation="4dp"
 
             android:layout_marginRight="10dp"
             android:backgroundTint="@color/beige"
