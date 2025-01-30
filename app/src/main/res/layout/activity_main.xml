@@ -19,6 +19,7 @@
         android:background="@drawable/rounded_button_background"
         android:clickable="true"
         android:clipToOutline="true"
+        android:elevation="7dp"
         android:contentDescription="User profile picture"
         android:focusable="true"
         android:scaleType="centerInside"
@@ -33,6 +34,7 @@
         android:layout_marginTop="15dp"
         android:gravity="center"
         android:text="TEA MEDITATION"
+        android:elevation="7dp"
         android:fontFamily="@font/vollkorn_sc"
         android:textColor="#9E705F"
         android:textSize="24sp"
@@ -53,6 +55,7 @@
         android:clickable="true"
         android:gravity="center"
         android:text="@string/button1"
+        android:elevation="7dp"
         app:layout_constraintBottom_toTopOf="@+id/scrollView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/fragment_container"
@@ -63,9 +66,11 @@
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
+        android:layout_margin="0dp"
+        android:layout_marginStart="28dp"
         android:backgroundTint="@color/beige"
         android:clickable="true"
+        android:elevation="7dp"
         android:gravity="center"
         android:text="MEDI GUIDELINES"
         app:layout_constraintBaseline_toBaselineOf="@+id/button1"
@@ -80,6 +85,7 @@
         android:clickable="true"
         android:gravity="center"
         android:text="FAVORITE"
+        android:elevation="7dp"
         app:layout_constraintBaseline_toBaselineOf="@+id/button2"
         app:layout_constraintStart_toEndOf="@+id/button2" />
 
@@ -110,6 +116,7 @@
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_marginTop="5dp"
+                android:elevation="4dp"
                 android:gravity="center">
 
                 <ImageView
@@ -121,7 +128,7 @@
                     android:clickable="true"
                     android:clipToOutline="true"
                     android:contentDescription="@string/text1"
-                    android:elevation="40dp"
+                    android:elevation="8dp"
                     android:focusable="true"
                     android:foreground="@drawable/foreground_border"
                     android:outlineProvider="background"
@@ -141,7 +148,7 @@
                     android:clickable="true"
                     android:clipToOutline="true"
                     android:contentDescription="@string/text2"
-                    android:elevation="40dp"
+                    android:elevation="8dp"
                     android:focusable="true"
                     android:foreground="@drawable/foreground_border"
                     android:outlineProvider="background"
@@ -159,7 +166,7 @@
                     android:clickable="true"
                     android:clipToOutline="true"
                     android:contentDescription="supersensers heal"
-                    android:elevation="40dp"
+                    android:elevation="8dp"
                     android:focusable="true"
                     android:foreground="@drawable/foreground_border"
                     android:outlineProvider="background"
@@ -203,6 +210,7 @@
             <TableRow
                 android:id="@+id/imagesrow"
                 android:layout_width="match_parent"
+                android:elevation="4dp"
                 android:gravity="center">
 
                 <ImageView
@@ -214,7 +222,7 @@
                     android:clickable="true"
                     android:clipToOutline="true"
                     android:contentDescription="stress"
-                    android:elevation="40dp"
+                    android:elevation="8dp"
                     android:focusable="true"
                     android:foreground="@drawable/foreground_border"
                     android:outlineProvider="background"
@@ -232,7 +240,7 @@
                     android:clickable="true"
                     android:clipToOutline="true"
                     android:contentDescription="parents role"
-                    android:elevation="40dp"
+                    android:elevation="8dp"
                     android:focusable="true"
                     android:foreground="@drawable/foreground_border"
                     android:outlineProvider="background"
@@ -250,7 +258,7 @@
                     android:clickable="true"
                     android:clipToOutline="true"
                     android:contentDescription="psychologist"
-                    android:elevation="40dp"
+                    android:elevation="8dp"
                     android:focusable="true"
                     android:foreground="@drawable/foreground_border"
                     android:outlineProvider="background"
@@ -294,6 +302,7 @@
 
             <TableRow
                 android:layout_width="match_parent"
+                android:elevation="4dp"
                 android:gravity="center">
 
                 <ImageView
@@ -305,7 +314,7 @@
                     android:clickable="true"
                     android:clipToOutline="true"
                     android:contentDescription="@string/text7"
-                    android:elevation="40dp"
+                    android:elevation="8dp"
                     android:focusable="true"
                     android:foreground="@drawable/foreground_border"
                     android:outlineProvider="background"
@@ -323,7 +332,7 @@
                     android:clickable="true"
                     android:clipToOutline="true"
                     android:contentDescription="@string/text8"
-                    android:elevation="40dp"
+                    android:elevation="8dp"
                     android:focusable="true"
                     android:foreground="@drawable/foreground_border"
                     android:outlineProvider="background"
@@ -341,7 +350,7 @@
                     android:clickable="true"
                     android:clipToOutline="true"
                     android:contentDescription="@string/text9"
-                    android:elevation="40dp"
+                    android:elevation="8dp"
                     android:focusable="true"
                     android:foreground="@drawable/foreground_border"
                     android:outlineProvider="background"
@@ -383,6 +392,7 @@
 
             <TableRow
                 android:layout_width="match_parent"
+                android:elevation="4dp"
                 android:gravity="center">
 
                 <ImageView
@@ -394,7 +404,7 @@
                     android:clickable="true"
                     android:clipToOutline="true"
                     android:contentDescription="pregnant yoga"
-                    android:elevation="40dp"
+                    android:elevation="8dp"
                     android:focusable="true"
                     android:foreground="@drawable/foreground_border"
                     android:outlineProvider="background"
@@ -412,7 +422,7 @@
                     android:clickable="true"
                     android:clipToOutline="true"
                     android:contentDescription="@string/text5"
-                    android:elevation="40dp"
+                    android:elevation="8dp"
                     android:focusable="true"
                     android:foreground="@drawable/foreground_border"
                     android:outlineProvider="background"
@@ -431,7 +441,7 @@
                     android:clickable="true"
                     android:clipToOutline="true"
                     android:contentDescription="sleeping"
-                    android:elevation="40dp"
+                    android:elevation="8dp"
                     android:focusable="true"
                     android:foreground="@drawable/foreground_border"
                     android:outlineProvider="background"
@@ -483,7 +493,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginStart="3dp"
         android:layout_marginEnd="3dp"
-        android:elevation="6dp"
+        android:elevation="8dp"
         android:padding="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -496,6 +506,7 @@
             android:layout_gravity="end"
             android:background="@drawable/rounded_corners"
             android:clipToOutline="true"
+            android:elevation="8dp"
             android:outlineProvider="background"
             app:backgroundTint="@color/beige"
             app:itemRippleColor="@null"
