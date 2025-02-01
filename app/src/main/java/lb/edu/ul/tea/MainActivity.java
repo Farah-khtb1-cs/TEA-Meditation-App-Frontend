@@ -20,6 +20,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -28,7 +29,7 @@ import java.time.Year;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-
+    private boolean isFragmentDisplayed = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -190,6 +191,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent I=new Intent(MainActivity.this, yoga1.class);
                 startActivity(I);
+            }
+        });
+
+
+        Button favoriteButton = findViewById(R.id.button3);
+        favoriteButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
             }
         });
 

@@ -27,6 +27,7 @@
         android:translationZ="40dp" />
 
     <LinearLayout
+        android:id="@+id/row11"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -89,6 +90,7 @@
     </LinearLayout>
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/row22"
         android:layout_width="match_parent"
         android:layout_marginTop="10dp"
         android:layout_height="wrap_content"
@@ -148,6 +150,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/row33"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/rounded_corners"
@@ -209,6 +212,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/row44"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
