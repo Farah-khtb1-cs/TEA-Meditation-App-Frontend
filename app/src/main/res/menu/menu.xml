@@ -7,6 +7,10 @@
         app:showAsAction="always"
         />
     <item
+        android:id="@+id/nav_dash"
+        android:title="Dashboard"
+        app:showAsAction="always"/>
+    <item
         android:id="@+id/nav_profile"
         android:title="Profile"
         app:showAsAction="always"

@@ -174,6 +174,21 @@ public class MainActivity extends AppCompatActivity {
                     return true;  // Do nothing more if we just close the fragment
                 }
             }
+            if (item.getItemId() == R.id.nav_dash) {
+                Fragment currentFragment = getSupportFragmentManager().findFragmentByTag(profile1.class.getSimpleName());
+                if (currentFragment != null && currentFragment.isVisible()) {
+                    // If the fragment is already visible, pop it from the back stack to close it
+                    getSupportFragmentManager().popBackStack();
+                } else {
+                    // Replace the fragment with DashboardFragment if it is not visible
+                /*    getSupportFragmentManager().beginTransaction()
+                            .replace(R.id.fragment_container, new DashboardFragment())
+                            .commit();*/
+                }
+                return true;  // Handle the navigation item selection
+            }
+
+
 
             // If a fragment is selected, perform the fragment transaction
             if (selectedFragment != null) {
@@ -201,10 +216,15 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
             }
         });
+        findViewById(R.id.sleep).setOnClickListener(v -> startSleepSession(60));
 
 
     }
-
+    private void startSleepSession(int minutes) {
+        Intent intent = new Intent(this, SleepActivity.class);
+        intent.putExtra("DURATION", minutes * 60 * 1000); // Convert to milliseconds
+        startActivity(intent);
+    }
 
 
 
