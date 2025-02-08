@@ -180,10 +180,8 @@ public class MainActivity extends AppCompatActivity {
                     // If the fragment is already visible, pop it from the back stack to close it
                     getSupportFragmentManager().popBackStack();
                 } else {
-                    // Replace the fragment with DashboardFragment if it is not visible
-                /*    getSupportFragmentManager().beginTransaction()
-                            .replace(R.id.fragment_container, new DashboardFragment())
-                            .commit();*/
+                    Intent I=new Intent(MainActivity.this, DashboardActivity.class);
+                    startActivity(I);
                 }
                 return true;  // Handle the navigation item selection
             }
