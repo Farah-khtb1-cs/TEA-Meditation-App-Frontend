@@ -10,10 +10,14 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.HorizontalScrollView;
 import android.widget.TextView;
+
 import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.android.material.textfield.TextInputEditText;
+
 import org.json.JSONArray;
 import org.json.JSONException;
+
 import java.util.ArrayList;
 
 public class DashboardActivity extends AppCompatActivity {
@@ -21,7 +25,7 @@ public class DashboardActivity extends AppCompatActivity {
     private TextInputEditText inputStressLevel, inputSleepHours;
     private TextView resultText;
     private BarChartView barChartView;
-    private HorizontalScrollView horizontalScrollView; // Added reference to the ScrollView
+    private HorizontalScrollView horizontalScrollView;
     private ArrayList<Float> moodData = new ArrayList<>();
 
     private static final String PREFS_NAME = "MoodDataPrefs";
@@ -38,36 +42,36 @@ public class DashboardActivity extends AppCompatActivity {
         Button btnCalculate = findViewById(R.id.btnCalculate);
         resultText = findViewById(R.id.resultText);
         barChartView = findViewById(R.id.barChart);
-        horizontalScrollView = findViewById(R.id.horizontalScrollView); // Initialize ScrollView
+        horizontalScrollView = findViewById(R.id.horizontalScrollView);
 
-        // Load previous data from SharedPreferences
+        // Load previous mood data from SharedPreferences
         loadMoodData();
 
-        // Handle Enter key to dismiss keyboard
+        // Set Enter key listener for input fields
         setEnterKeyListener(inputStressLevel);
         setEnterKeyListener(inputSleepHours);
 
-        // Set OnClickListener to calculate mood
+        // Set OnClickListener for Calculate button
         btnCalculate.setOnClickListener(v -> {
             hideKeyboard();
             calculateMood();
         });
     }
 
-    // Dismiss keyboard when pressing Enter
+    // Helper method to handle Enter key press and trigger mood calculation
     private void setEnterKeyListener(TextInputEditText inputField) {
         inputField.setOnEditorActionListener((v, actionId, event) -> {
             if (actionId == EditorInfo.IME_ACTION_DONE ||
                     (event != null && event.getKeyCode() == KeyEvent.KEYCODE_ENTER && event.getAction() == KeyEvent.ACTION_DOWN)) {
                 hideKeyboard();
-                calculateMood(); // Optional: Trigger calculation when Enter is pressed
+                calculateMood();
                 return true;
             }
             return false;
         });
     }
 
-    // Hide the soft keyboard
+    // Helper method to hide soft keyboard
     private void hideKeyboard() {
         InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
         if (getCurrentFocus() != null) {
@@ -75,7 +79,7 @@ public class DashboardActivity extends AppCompatActivity {
         }
     }
 
-    // Calculate "Mo3adal Nafseyte"
+    // Calculate the "Mo3adal Nafseyte" value and update the result
     private void calculateMood() {
         String stressStr = inputStressLevel.getText().toString().trim();
         String sleepStr = inputSleepHours.getText().toString().trim();
@@ -100,13 +104,14 @@ public class DashboardActivity extends AppCompatActivity {
             moodData.add((float) mo3adalNafseyte);
             updateChart();
             saveMoodData();
-            scrollToEnd(); // Ensure scrolling happens
+            scrollToEnd(); // Ensure the chart scrolls to the end
 
         } catch (NumberFormatException e) {
             resultText.setText("Invalid input. Enter numbers only.");
         }
     }
 
+    // Update the bar chart with the latest mood data
     private void updateChart() {
         float[] moodArray = new float[moodData.size()];
         for (int i = 0; i < moodData.size(); i++) {
@@ -115,6 +120,7 @@ public class DashboardActivity extends AppCompatActivity {
         barChartView.setDataPoints(moodArray);
     }
 
+    // Save the current mood data to SharedPreferences
     private void saveMoodData() {
         SharedPreferences sharedPreferences = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
@@ -128,6 +134,7 @@ public class DashboardActivity extends AppCompatActivity {
         editor.apply();
     }
 
+    // Load saved mood data from SharedPreferences
     private void loadMoodData() {
         SharedPreferences sharedPreferences = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
         String savedData = sharedPreferences.getString(KEY_MOOD_DATA, null);
@@ -146,12 +153,11 @@ public class DashboardActivity extends AppCompatActivity {
         }
     }
 
-    // Scroll the chart to the rightmost end
+    // Scroll the HorizontalScrollView to the rightmost position
     private void scrollToEnd() {
         horizontalScrollView.post(() -> horizontalScrollView.fullScroll(HorizontalScrollView.FOCUS_RIGHT));
     }
 }
-
 
 
 

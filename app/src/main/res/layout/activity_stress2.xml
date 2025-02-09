@@ -1,72 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:background="@color/babygreen"
     android:padding="16dp"
-    android:background="#EFF3E6">
+    tools:context=".MainActivity">
 
+    <!-- Album Art with circular image and shadow -->
     <ImageView
         android:id="@+id/playimagee"
-        android:layout_width="match_parent"
-        android:layout_height="400dp"
+        android:layout_width="0dp"
+        android:layout_height="300dp"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="75dp"
-        android:clickable="true"
-        android:contentDescription="supersensers heal"
-        android:focusable="true"
-        android:scaleType="centerCrop"
-        android:src="@drawable/supersenser"
-        android:background="@drawable/image_background"
-        android:elevation="8dp"
-        android:outlineProvider="background"
+        android:background="@drawable/rounded_corners"
         android:clipToOutline="true"
-        android:translationZ="40dp"
-        android:paddingBottom="2dp"
-        android:foreground="@drawable/soundhealling2" />
+        android:contentDescription="Supersensers heal"
+        android:outlineProvider="background"
+        android:scaleType="centerCrop"
+        android:src="@drawable/soundhealling2"
+        android:translationZ="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- TextView for title "RELAX" -->
     <TextView
         android:id="@+id/Relax"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="RELAX"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/vollkorn_sc"
+        android:gravity="center"
+        android:text="RELAX"
         android:textColor="@color/beige"
-        android:textStyle="italic"
-        android:textSize="40sp"
-        android:layout_marginBottom="10dp"
-        android:gravity="center" />
+        android:textSize="42sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/playimagee" />
 
+    <!-- Subtitle with dynamic text (Artist/Track Info) -->
     <TextView
         android:id="@+id/feelthesound2"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text=""
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="Feel the Sound"
         android:textColor="@color/beige"
-        android:textStyle="italic"
         android:textSize="20sp"
-        android:layout_marginBottom="10dp"
-        android:gravity="center" />
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Relax" />
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="16dp">
+    <!-- Play/Pause Button with background and stylish border -->
 
-        <ImageView
-            android:id="@+id/playPauseButton"
-            android:layout_width="44dp"
-            android:layout_height="44dp"
-            android:layout_centerHorizontal="true"
-            android:src="@drawable/playy"
-            android:contentDescription="Play Button" />
+    <!-- SeekBar with modern design -->
+    <ImageView
+        android:id="@+id/playPauseButton"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="36dp"
+        android:clickable="true"
+        android:contentDescription="Play Button"
+        android:elevation="6dp"
+        android:focusable="true"
+        android:src="@drawable/playy"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/feelthesound2" />
 
-        <SeekBar
-            android:id="@+id/seekBar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/playPauseButton"
-            android:layout_marginTop="21dp"
-            android:outlineSpotShadowColor="@color/beige" />
-    </RelativeLayout>
-</LinearLayout>
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:max="100"
+        android:progressTint="@color/babygreen"
+        android:thumbTint="@color/beige"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/playPauseButton" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

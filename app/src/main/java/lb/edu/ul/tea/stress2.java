@@ -3,27 +3,23 @@ package lb.edu.ul.tea;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.os.Handler;
 import android.widget.ImageView;
 import android.widget.SeekBar;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 public class stress2 extends AppCompatActivity {
     private ImageView playPauseButton;
     private SeekBar seekBar;
     private MediaPlayer mediaPlayer;
     private boolean isPlaying = false;
+    private Handler handler = new Handler();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_stress2);
-
 
         // Initialize views
         playPauseButton = findViewById(R.id.playPauseButton);
@@ -43,19 +39,8 @@ public class stress2 extends AppCompatActivity {
         mediaPlayer = MediaPlayer.create(this, songResId);
         seekBar.setMax(mediaPlayer.getDuration());
 
-        // Update SeekBar progress
-        new Thread(() -> {
-            while (mediaPlayer != null) {
-                try {
-                    if (mediaPlayer.isPlaying()) {
-                        seekBar.setProgress(mediaPlayer.getCurrentPosition());
-                    }
-                    Thread.sleep(1000); // Update every second
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-        }).start();
+        // Update SeekBar progress every second
+        handler.postDelayed(updateSeekBarRunnable, 1000);
 
         // Play/Pause Button Listener
         playPauseButton.setOnClickListener(v -> {
@@ -93,6 +78,17 @@ public class stress2 extends AppCompatActivity {
         });
     }
 
+    // Runnable to update SeekBar progress in the main thread
+    private Runnable updateSeekBarRunnable = new Runnable() {
+        @Override
+        public void run() {
+            if (mediaPlayer != null && mediaPlayer.isPlaying()) {
+                seekBar.setProgress(mediaPlayer.getCurrentPosition());
+            }
+            handler.postDelayed(this, 1000); // Update every second
+        }
+    };
+
     @Override
     protected void onDestroy() {
         super.onDestroy();
@@ -100,5 +96,6 @@ public class stress2 extends AppCompatActivity {
             mediaPlayer.release();
             mediaPlayer = null;
         }
+        handler.removeCallbacks(updateSeekBarRunnable); // Stop updating the SeekBar
     }
 }
