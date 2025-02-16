@@ -69,7 +69,7 @@
         android:contentDescription="Play Button"
         android:elevation="6dp"
         android:focusable="true"
-        android:src="@drawable/playy"
+        android:src="@drawable/play"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/feelthesound2" />
@@ -81,7 +81,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
         android:max="100"
-        android:progressTint="@color/babygreen"
+        android:progressTint="@color/beige"
         android:thumbTint="@color/beige"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

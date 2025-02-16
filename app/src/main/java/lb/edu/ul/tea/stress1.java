@@ -93,10 +93,10 @@ public class stress1 extends AppCompatActivity {
         if (mediaPlayer != null) {
             mediaPlayer.stop();
             mediaPlayer.release();
+            mediaPlayer = null; // Avoid memory leaks
         }
-        mediaPlayer = MediaPlayer.create(this, songResId);
-        mediaPlayer.start();
 
+        // Just send the songResId to stress2 without playing it here
         Intent intent = new Intent(stress1.this, stress2.class);
         intent.putExtra("songResId", songResId);
         startActivity(intent);

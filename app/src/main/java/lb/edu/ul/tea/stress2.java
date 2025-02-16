@@ -46,10 +46,10 @@ public class stress2 extends AppCompatActivity {
         playPauseButton.setOnClickListener(v -> {
             if (isPlaying) {
                 mediaPlayer.pause();
-                playPauseButton.setImageResource(R.drawable.playy); // Replace with your play icon
+                playPauseButton.setImageResource(R.drawable.play); // Replace with your play icon
             } else {
                 mediaPlayer.start();
-                playPauseButton.setImageResource(R.drawable.pausee); // Replace with your pause icon
+                playPauseButton.setImageResource(R.drawable.pause); // Replace with your pause icon
             }
             isPlaying = !isPlaying;
         });
@@ -72,7 +72,7 @@ public class stress2 extends AppCompatActivity {
 
         // Reset button state when audio finishes
         mediaPlayer.setOnCompletionListener(mp -> {
-            playPauseButton.setImageResource(R.drawable.playy); // Reset to play icon
+            playPauseButton.setImageResource(R.drawable.play); // Reset to play icon
             isPlaying = false;
             seekBar.setProgress(0); // Reset SeekBar
         });
