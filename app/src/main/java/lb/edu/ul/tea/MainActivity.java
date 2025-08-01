@@ -186,8 +186,6 @@ public class MainActivity extends AppCompatActivity {
                 return true;  // Handle the navigation item selection
             }
 
-
-
             // If a fragment is selected, perform the fragment transaction
             if (selectedFragment != null) {
                 FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
